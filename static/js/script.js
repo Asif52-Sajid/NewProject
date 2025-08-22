@@ -57,4 +57,10 @@ $(document).ready(function() {
     
 }); 
 // jquery end
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    // Wait for 4 seconds, then fade out all messages
+    setTimeout(function(){
+        $('.message-container').fadeOut(500);
+    }, 4000);
+</script>
