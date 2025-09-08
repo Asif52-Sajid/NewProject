@@ -1,0 +1,38 @@
+.rate > input{
+display : none;
+}
+.rate{
+display : inline-block;
+border:0;
+}
+.rate > label{
+float : right;
+}
+
+.rate > label:before {
+    display: inline-block;      /* ← semicolon was missing */
+    font-size: 1.1rem;
+    font-family: "Font Awesome 5 Free"; /* or "FontAwesome" if using v4 */
+    font-weight: 900;           /* required for solid icons */
+    content: "\f005";           /* fa-star */
+    margin: 0;
+    padding: 0.3rem .2rem;
+    cursor: pointer;
+}
+
+.rate .half::before {
+    content: "\f089"; /* fa-star-half-alt in FA5+ */
+    font-family: "Font Awesome 5 Free"; /* important! */
+    font-weight: 900;
+    position: absolute;
+    padding-right: 0;
+}
+
+input:checked ~ label, label:hover ~ label{
+color:#ffb503
+}
+
+input:checked + label:hover, input:checked ~ label:hover,input:checked ~ label :hover ~ label,
+label:hover ~ input:checked ~ label{
+color : #cc900;
+}
